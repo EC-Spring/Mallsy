@@ -22,9 +22,9 @@ public class Cart {
     @Column(nullable = false)
     private Long putAt;
 
-    @OneToOne(mappedBy = "cart", cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
-    private Item item;
+//    @OneToOne(mappedBy = "cart", cascade = CascadeType.ALL)
+//    @PrimaryKeyJoinColumn
+//    private Item item;
 
     @OneToOne(mappedBy = "cart", cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
