@@ -26,14 +26,14 @@ public class ItemServiceImpl implements ItemService {
 
     private final ItemRepository itemRepository;
 
-//    @Override
-//    public List<SummarizedItemGetRes> getSummarizeItemsAsPage(Pageable pageable, ItemGetByClassReq itemGetByClassReq) {
-//        Iterable<Item> items = itemRepository.findAll(ItemClassPredicate.search(itemGetByClassReq), pageable);
-//        List<SummarizedItemGetRes> itemsRes = new ArrayList<>();
-//        for (Item item : items)
-//                itemsRes.add(ItemEntityConverter.toSummarizedItemGetRes(item));
-//        return itemsRes;
-//    }
+    @Override
+    public List<SummarizedItemGetRes> getSummarizeItemsAsPage(Pageable pageable, ItemGetByClassReq itemGetByClassReq) {
+        Iterable<Item> items = itemRepository.findAll(ItemClassPredicate.search(itemGetByClassReq), pageable);
+        List<SummarizedItemGetRes> itemsRes = new ArrayList<>();
+        for (Item item : items)
+                itemsRes.add(ItemEntityConverter.toSummarizedItemGetRes(item));
+        return itemsRes;
+    }
 
     @Override
     public ItemGetRes getItemById(Long id) {
