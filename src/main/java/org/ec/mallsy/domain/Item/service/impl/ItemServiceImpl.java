@@ -50,33 +50,33 @@ public class ItemServiceImpl implements ItemService {
         else throw new ItemNotFoundExceotion(id);
     }
 
-//    @Override
-//    @Transactional
-//    public Long putItem(ItemPutReq itemPutReq) {
-//        Long id = itemPutReq.getId();
-//        Item item = itemRepository.findById(id)
-//                .orElseThrow(() -> new ItemNotFoundExceotion(id));
-//
-//        String title = itemPutReq.getTitle();
-//        String brand = itemPutReq.getBrand();
-//        Long price = itemPutReq.getPrice();
-//        String content = itemPutReq.getContent();
-//        String largeClass = itemPutReq.getLargeClass();
-//        String mediumClass = itemPutReq.getMediumClass();
-//        String smallClass = itemPutReq.getSmallClass();
-//        Map<String, Integer> stocks = itemPutReq.getStocks();
-//
-//        if (title != null) item.setTitle(title);
-//        if (brand != null) item.setBrand(brand);
-//        if (price != null) item.setPrice(price);
-//        if (content != null) item.setContent(content);
-//        if (largeClass != null) item.setLargeClass(largeClass);
-//        if (mediumClass != null) item.setMediumClass(mediumClass);
-//        if (smallClass != null) item.setSmallClass(smallClass);
-//        if (stocks != null) item.setStocks(stocks);
-//
-//        return id;
-//    }
+    @Override
+    @Transactional
+    public Long putItem(ItemPutReq itemPutReq) {
+        Long id = itemPutReq.getId();
+        Item item = itemRepository.findById(id)
+                .orElseThrow(() -> new ItemNotFoundExceotion(id));
+
+        String title = itemPutReq.getTitle();
+        String brand = itemPutReq.getBrand();
+        Long price = itemPutReq.getPrice();
+        String content = itemPutReq.getContent();
+        String largeClass = itemPutReq.getLargeClass();
+        String mediumClass = itemPutReq.getMediumClass();
+        String smallClass = itemPutReq.getSmallClass();
+        Map<String, Integer> stocks = itemPutReq.getStocks();
+
+        if (title != null) item.setTitle(title);
+        if (brand != null) item.setBrand(brand);
+        if (price != null) item.setPrice(price);
+        if (content != null) item.setContent(content);
+        if (largeClass != null) item.setLargeClass(largeClass);
+        if (mediumClass != null) item.setMediumClass(mediumClass);
+        if (smallClass != null) item.setSmallClass(smallClass);
+        if (stocks != null) item.setStocks(stocks);
+
+        return id;
+    }
 
     @Override
     public Long postItem(ItemPostReq itemPostReq) {
