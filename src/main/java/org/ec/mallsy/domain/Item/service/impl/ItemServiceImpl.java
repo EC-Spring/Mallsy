@@ -27,6 +27,7 @@ public class ItemServiceImpl implements ItemService {
     private final ItemRepository itemRepository;
 
     @Override
+    @Transactional
     public List<SummarizedItemGetRes> getSummarizeItemsAsPage(Pageable pageable, ItemGetByClassReq itemGetByClassReq) {
         Iterable<Item> items = itemRepository.findAll(ItemClassPredicate.search(itemGetByClassReq), pageable);
         List<SummarizedItemGetRes> itemsRes = new ArrayList<>();
@@ -36,6 +37,7 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
+    @Transactional
     public ItemGetRes getItemById(Long id) {
         Item item = itemRepository.findById(id)
                 .orElseThrow(() -> new ItemNotFoundExceotion(id));
@@ -44,6 +46,7 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
+    @Transactional
     public void deleteItemById(Long id) {
         if (itemRepository.existsById(id))
             itemRepository.deleteById(id);
@@ -79,6 +82,7 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
+    @Transactional
     public Long postItem(ItemPostReq itemPostReq) {
         Item item = ItemEntityConverter.toItem(itemPostReq);
         return itemRepository.save(item).getId();
