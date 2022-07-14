@@ -14,13 +14,13 @@ public class ItemClassPredicate {
         String smallClass = itemGetByClassReq.getSmallClass();
 
         BooleanBuilder builder = new BooleanBuilder();
-        if (!largeClass.equals("")) {
+        if (largeClass != null && !largeClass.equals("")) {
             builder.and(qItem.largeClass.eq(largeClass));
         }
-        if (!mediumClass.equals("")) {
+        if (mediumClass != null && !mediumClass.equals("")) {
             builder.and(qItem.mediumClass.eq(mediumClass));
         }
-        if (!smallClass.equals("")) {
+        if (smallClass != null && !smallClass.equals("")) {
             builder.and(qItem.smallClass.eq(smallClass));
         }
 

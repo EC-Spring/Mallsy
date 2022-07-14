@@ -32,8 +32,13 @@ dependencies {
     runtimeOnly 'mysql:mysql-connector-java'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
 
-    implementation 'com.querydsl:querydsl-jpa' // (2)
+    annotationProcessor('org.projectlombok:lombok')
+    testAnnotationProcessor('org.projectlombok:lombok')
+
+    implementation 'com.querydsl:querydsl-jpa:5.0.0' // (2)
+    implementation 'com.querydsl:querydsl-apt:5.0.0'
 }
 
 tasks.named('test') {
@@ -47,7 +52,7 @@ tasks.named('asciidoctor') {
 }
 
 
-def querydslDir = "src/main/generated" // (3)
+def querydslDir = "$buildDir/generated/querydsl" // (3)
 
 querydsl { // (4)
     jpa = true

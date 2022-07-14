@@ -88,6 +88,26 @@ public class Item {
         this.updatedAt = this.createdAt;
     }
 
+    public Item(Long id, Long sellerId, Long partNumber,
+                String title, String brand, Long price, String content,
+                String largeClass, String mediumClass, String smallClass, Map<String, Integer> stocks) {
+        this.id = id;
+        this.sellerId = sellerId;
+        this.partNumber = partNumber;
+        this.title = title;
+        this.brand = brand;
+        this.price = price;
+        this.content = content;
+        this.largeClass = largeClass;
+        this.mediumClass = mediumClass;
+        this.smallClass = smallClass;
+        this.stocks = stocks;
+
+        this.views = 0L;
+        this.createdAt = System.currentTimeMillis();
+        this.updatedAt = this.createdAt;
+    }
+
     @Builder
     public Item(Long id, String title, String brand, Long price, String content, String largeClass, String mediumClass, String smallClass, Map<String, Integer> stocks) {
         this.id = id;
