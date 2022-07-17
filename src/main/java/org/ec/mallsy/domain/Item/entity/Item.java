@@ -121,6 +121,10 @@ public class Item {
         this.stocks = stocks;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public void increaseViews() {
         this.views++;
     }

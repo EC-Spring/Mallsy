@@ -6,6 +6,7 @@ import org.ec.mallsy.domain.Item.dto.request.ItemGetByClassReq;
 import org.ec.mallsy.domain.Item.entity.QItem;
 
 public class ItemClassPredicate {
+
     public static Predicate search(ItemGetByClassReq itemGetByClassReq) {
         QItem qItem = QItem.item;
 
