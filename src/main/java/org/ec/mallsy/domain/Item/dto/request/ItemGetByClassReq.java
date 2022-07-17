@@ -1,11 +1,10 @@
 package org.ec.mallsy.domain.Item.dto.request;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 
-@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 public class ItemGetByClassReq {
 
@@ -13,4 +12,11 @@ public class ItemGetByClassReq {
     private String largeClass;
     private String mediumClass;
     private String smallClass;
+
+    @Builder
+    public ItemGetByClassReq(String largeClass, String mediumClass, String smallClass) {
+        this.largeClass = largeClass;
+        this.mediumClass = mediumClass;
+        this.smallClass = smallClass;
+    }
 }

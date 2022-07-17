@@ -1,18 +1,14 @@
 package org.ec.mallsy.domain.Item.dto.request;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Map;
 
-@AllArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ItemPostReq {
 
     @NotNull
@@ -22,6 +18,7 @@ public class ItemPostReq {
     private Long partNumber;
     @NotNull @Size(min = 4, max = 64)
     private String title;
+
     @NotNull @Size(min = 1, max = 64)
     private String brand;
     @NotNull
@@ -38,4 +35,18 @@ public class ItemPostReq {
 
     @NotNull
     private Map<String, Integer> stocks;
+
+    @Builder
+    public ItemPostReq(Long sellerId, Long partNumber, String title, String brand, Long price, String content, String largeClass, String mediumClass, String smallClass, Map<String, Integer> stocks) {
+        this.sellerId = sellerId;
+        this.partNumber = partNumber;
+        this.title = title;
+        this.brand = brand;
+        this.price = price;
+        this.content = content;
+        this.largeClass = largeClass;
+        this.mediumClass = mediumClass;
+        this.smallClass = smallClass;
+        this.stocks = stocks;
+    }
 }

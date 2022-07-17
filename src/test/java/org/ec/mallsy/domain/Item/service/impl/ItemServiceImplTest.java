@@ -164,9 +164,10 @@ class ItemServiceImplTest {
                     return Optional.of(virtualDB.get(id));
                 });
 
-        ItemPutReq itemPutReq = new ItemPutReq();
-        itemPutReq.setId(2L);
-        itemPutReq.setTitle("title111");
+        ItemPutReq itemPutReq = ItemPutReq.builder()
+                .id(2L)
+                .title("title111")
+                .build();
         itemService.putItem(itemPutReq);
 
         Optional<Item> item = itemRepository.findById(2L);

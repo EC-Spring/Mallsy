@@ -1,8 +1,6 @@
 package org.ec.mallsy.domain.Item.dto.response;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.ec.mallsy.domain.Image.entity.Image;
 import org.ec.mallsy.domain.comment.entity.Comment;
 
@@ -11,8 +9,7 @@ import javax.validation.constraints.Size;
 import java.util.List;
 import java.util.Map;
 
-@AllArgsConstructor
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 public class ItemGetRes {
 
@@ -46,9 +43,30 @@ public class ItemGetRes {
     @NotNull
     private String smallClass;
 
+
     private List<Image> images;
     private List<Comment> comments;
 
     @NotNull
     private Map<String, Integer> stocks;
+
+    @Builder
+    public ItemGetRes(Long id, Long sellerId, Long partNumber, String title, String brand, Long views, Long price, String content, Long createdAt, Long updatedAt, String largeClass, String mediumClass, String smallClass, List<Image> images, List<Comment> comments, Map<String, Integer> stocks) {
+        this.id = id;
+        this.sellerId = sellerId;
+        this.partNumber = partNumber;
+        this.title = title;
+        this.brand = brand;
+        this.views = views;
+        this.price = price;
+        this.content = content;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.largeClass = largeClass;
+        this.mediumClass = mediumClass;
+        this.smallClass = smallClass;
+        this.images = images;
+        this.comments = comments;
+        this.stocks = stocks;
+    }
 }

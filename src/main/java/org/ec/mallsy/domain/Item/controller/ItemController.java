@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -23,7 +24,7 @@ public class ItemController {
     private final ItemService itemService;
 
     @GetMapping("/page")
-    public ResponseEntity getSummarizedItemsByClassAsPage(@PageableDefault() Pageable pageable, ItemGetByClassReq itemGetByClassReq) {
+    public ResponseEntity getSummarizedItemsByClassAsPage(@PageableDefault() Pageable pageable, @Valid ItemGetByClassReq itemGetByClassReq) {
         List<SummarizedItemGetRes> summarizedItemGetResList = itemService.getSummarizeItemsAsPage(pageable, itemGetByClassReq);
         return ResponseEntity.ok(summarizedItemGetResList);
     }
@@ -35,13 +36,13 @@ public class ItemController {
     }
 
     @PostMapping()
-    public ResponseEntity postItem(@RequestBody ItemPostReq itemPostReq) {
+    public ResponseEntity postItem(@RequestBody @Valid ItemPostReq itemPostReq) {
         Long id = itemService.postItem(itemPostReq);
         return ResponseEntity.ok(id);
     }
 
     @PutMapping
-    public ResponseEntity putItem(@RequestBody ItemPutReq itemPutReq) {
+    public ResponseEntity putItem(@RequestBody @Valid ItemPutReq itemPutReq) {
         Long id = itemService.putItem(itemPutReq);
         return ResponseEntity.ok(id);
     }

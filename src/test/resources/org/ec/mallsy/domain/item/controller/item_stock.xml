@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <item_stock stock_id="1" stocks="2" stocks_key="M" />
+    <item_stock stock_id="2" stocks="2" stocks_key="M" />
+    <item_stock stock_id="3" stocks="2" stocks_key="M" />
+    <item_stock stock_id="4" stocks="2" stocks_key="M" />
+    <item_stock stock_id="5" stocks="2" stocks_key="M" />
+    <item_stock stock_id="6" stocks="2" stocks_key="M" />
+    <item_stock stock_id="7" stocks="2" stocks_key="M" />
+    <item_stock stock_id="8" stocks="2" stocks_key="M" />
+    <item_stock stock_id="9" stocks="2" stocks_key="M" />
+    <item_stock stock_id="10" stocks="2" stocks_key="M" />
+</dataset>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<dataset>
+    <item id="1" brand="brand" content="012345678901234567890123456789" created_at="1656849118973"
+          large_class="l1" medium_class="m1" part_number="1" price="111222" seller_id="1" small_class="s" title="title" updated_at="1656849118973" views="0" />
+    <item id="2" brand="brand" content="012345678901234567890123456789" created_at="1656849118973"
+          large_class="l1" medium_class="m1" part_number="2" price="111222" seller_id="1" small_class="s" title="title" updated_at="1656849118973" views="0" />
+    <item id="3" brand="brand" content="012345678901234567890123456789" created_at="1656849118973"
+          large_class="l1" medium_class="m2" part_number="3" price="111222" seller_id="1" small_class="s" title="title" updated_at="1656849118973" views="0" />
+    <item id="4" brand="brand" content="012345678901234567890123456789" created_at="1656849118973"
+          large_class="l1" medium_class="m2" part_number="4" price="111222" seller_id="1" small_class="s" title="title" updated_at="1656849118973" views="0" />
+    <item id="5" brand="brand" content="012345678901234567890123456789" created_at="1656849118973"
+          large_class="l2" medium_class="m3" part_number="5" price="111222" seller_id="1" small_class="s" title="title" updated_at="1656849118973" views="0" />
+    <item id="6" brand="brand" content="012345678901234567890123456789" created_at="1656849118973"
+          large_class="l2" medium_class="m3" part_number="6" price="111222" seller_id="1" small_class="s" title="title" updated_at="1656849118973" views="0" />
+    <item id="7" brand="brand" content="012345678901234567890123456789" created_at="1656849118973"
+          large_class="l2" medium_class="m4" part_number="7" price="111222" seller_id="1" small_class="s" title="title" updated_at="1656849118973" views="0" />
+    <item id="8" brand="brand" content="012345678901234567890123456789" created_at="1656849118973"
+          large_class="l2" medium_class="m4" part_number="8" price="111222" seller_id="1" small_class="s" title="title" updated_at="1656849118973" views="0" />
+    <item id="9" brand="brand" content="012345678901234567890123456789" created_at="1656849118973"
+          large_class="l2" medium_class="m5" part_number="9" price="111222" seller_id="1" small_class="s" title="title" updated_at="1656849118973" views="0" />
+    <item id="10" brand="brand" content="012345678901234567890123456789" created_at="1656849118973"
+          large_class="l2" medium_class="m5" part_number="10" price="111222" seller_id="1" small_class="s" title="title" updated_at="1656849118973" views="0" />
+</dataset>
