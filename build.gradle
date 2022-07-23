@@ -35,6 +35,8 @@ dependencies {
     testImplementation group: 'org.dbunit', name: 'dbunit', version: '2.6.0'
     testImplementation group: 'com.github.springtestdbunit', name: 'spring-test-dbunit', version: '1.3.0'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
 
     annotationProcessor('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
