@@ -140,15 +140,6 @@ class ItemControllerTest {
 
     @Test
     void putItem() throws Exception {
-//        s.id = id;
-//        this.title = title;
-//        this.brand = brand;
-//        this.price = price;
-//        this.content = content;
-//        this.largeClass = largeClass;
-//        this.mediumClass = mediumClass;
-//        this.smallClass = smallClass;
-//        this.stocks = stocks;
         // given
         ItemPutReq itemPutReq = ItemPutReq.builder()
                 .id(1L)
